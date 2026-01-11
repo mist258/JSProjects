@@ -1,0 +1,85 @@
+/* Chrome, Edge, Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  background-color: white;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.form input {
+  padding: 12px 14px;
+  font-size: 18px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px #4f46e5;
+}
+
+.form input.error {
+  border: 2px solid #ef4444;
+  background-color: #fee2e2;
+}
+
+.form input.error:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.4);
+}
+
+.wrapper > button {
+  padding: 14px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4f46e5;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.wrapper > button:hover {
+  background-color: #4338ca;
+}
