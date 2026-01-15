@@ -86,13 +86,14 @@ var Worker1 = /** @class */ (function () {
         }
     };
     Worker1.prototype.withdrawSalary = function (withdraw) {
-        if (withdraw > this.salary || withdraw < 0) {
-            throw new Error("Withdraw cannot be negative or you cannot withdraw more than your salary");
+        if (withdraw <= 0) {
+            throw new Error("Withdraw amount should be more than 0");
         }
-        else {
-            this.salary -= withdraw;
-            return this.salary;
+        if (withdraw > this.salary) {
+            throw new Error("Insufficient funds");
         }
+        this.salary -= withdraw;
+        return this.salary;
     };
     return Worker1;
 }());
